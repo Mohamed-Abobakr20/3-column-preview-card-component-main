@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/* General Style */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+}
+
+body {
+    min-height: 100vh;
+    margin: 30px;
+    background-color: var(--Very-light-gray-background-headings-buttons);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p,
+h2,
+img {
+    padding-bottom: 25px;
+}
+
+p,
+button {
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+}
+
+
+/* Container Style */
+
+.container {
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+}
+
+
+/* Card Style */
+
+.container .card {
+    padding: 35px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container .card:nth-child(1) {
+    background-color: var(--Bright-orange);
+}
+
+.container .card:nth-child(2) {
+    background-color: var(--Dark-cyan);
+}
+
+.container .card:nth-child(3) {
+    background-color: var(--Very-dark-cyan);
+}
+
+.container .card img {
+    display: block;
+    width: 25%;
+}
+
+.container .card h2 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--Very-light-gray-background-headings-buttons);
+}
+
+.container .card p {
+    line-height: 1.5rem;
+    color: var(--Transparent-white-paragraphs);
+}
+
+.container .card button {
+    padding: 12px;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    width: 140px;
+    background-color: var(--Very-light-gray-background-headings-buttons);
+    cursor: pointer;
+}
+
+.container .card:nth-child(1) button {
+    color: var(--Bright-orange);
+}
+
+.container .card:nth-child(2) button {
+    color: var(--Dark-cyan);
+}
+
+.container .card:nth-child(3) button {
+    color: var(--Very-dark-cyan);
+}
+
+.container .card button:hover {
+    background-color: inherit;
+    outline: 2px solid var(--Very-light-gray-background-headings-buttons);
+    color: var(--Very-light-gray-background-headings-buttons);
+}
+
+
+/* Media Style */
+
+@media screen and (min-width: 800px) {
+    .container {
+        flex-direction: row;
+    }
+}
